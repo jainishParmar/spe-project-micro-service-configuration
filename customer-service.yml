@@ -1,0 +1,14 @@
+server:
+  port: 8881
+
+spring:
+
+
+  data:
+    mongodb:
+      username: jainish
+      password: jainish
+      host: localhost
+      port: 27017
+      database: customer
+      authentication-database: admin
