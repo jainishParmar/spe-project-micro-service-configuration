@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5430/esd_mini_project
+    url: jdbc:postgresql://localhost:5430/speproject
     username: speproject
     password: speproject
   jpa:
