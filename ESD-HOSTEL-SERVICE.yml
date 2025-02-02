@@ -8,7 +8,7 @@ spring:
     show-sql: true
     database-platform: org.postgresql.Driver
   datasource:
-    url: jdbc:postgresql://localhost:5432/esd_mini_project?serverTimezone=UTC&useSSL=false&autoReconnect=true
+    url: jdbc:postgresql://localhost:5430/esd_mini_project?serverTimezone=UTC&useSSL=false&autoReconnect=true
     username: speproject
     password: speproject
 
