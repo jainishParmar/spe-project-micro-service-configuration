@@ -2,16 +2,16 @@ server:
   port: 5001
 
 spring:
+   datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5430/esd_mini_project
+    username: speproject
+    password: speproject
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
-    database-platform: org.postgresql.Driver
-  datasource:
-    url: jdbc:postgresql://localhost:5430/esd_mini_project?serverTimezone=UTC&useSSL=false&autoReconnect=true
-    username: speproject
-    password: speproject
-
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
   kafka:
     producer:
