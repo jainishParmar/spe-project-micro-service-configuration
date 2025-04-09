@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5430/speproject
-    username: speproject
-    password: speproject
+    url: jdbc:postgresql://localhost:5432/esd_mini_project
+    username: root
+    password: Falcon_30$0401
   jpa:
     hibernate:
       ddl-auto: update
