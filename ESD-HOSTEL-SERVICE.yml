@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/esd_mini_project
     username: root
-    password: himanshu
+    password: Falcon_30$0401
   jpa:
     hibernate:
       ddl-auto: update
