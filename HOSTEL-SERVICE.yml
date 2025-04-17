@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/esd_mini_project?createDatabaseIfNotExist=true
+    url: jdbc:mysql://${HOSTEL_DB}:3306/esd_mini_project?createDatabaseIfNotExist=true
     username: jaimin
     password: enum3rat3
   jpa:
@@ -15,7 +15,7 @@ spring:
 
   kafka:
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: ${KAFKA_EMAIL}:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       
