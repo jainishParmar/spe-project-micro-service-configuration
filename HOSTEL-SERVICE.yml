@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${HOSTEL_DB}:3306/esd_mini_project?createDatabaseIfNotExist=true
+    url: jdbc:mysql://${HOSTEL_DB}:3306/hostel_managment?createDatabaseIfNotExist=true
     username: jaimin
     password: enum3rat3
   jpa:
