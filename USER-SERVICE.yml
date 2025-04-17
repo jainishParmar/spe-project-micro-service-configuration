@@ -5,7 +5,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${USER_DB}:3306/user_managment?createDatabaseIfNotExist=true
     username: root
-    password: password
+    password: root
   jpa:
     hibernate:
       ddl-auto: update
