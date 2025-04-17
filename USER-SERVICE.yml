@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${USER_DB}:3306/hostel_managment?createDatabaseIfNotExist=true
+    url: jdbc:mysql://${USER_DB}:3306/user_managment?createDatabaseIfNotExist=true
     username: jaimin
     password: enum3rat3
   jpa:
