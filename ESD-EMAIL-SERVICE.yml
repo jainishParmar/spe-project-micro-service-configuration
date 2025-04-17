@@ -30,12 +30,12 @@ spring:
           starttls:
             enable: true
 
-eureka:
-  instance:
-    prefer-ip-address: true
+# eureka:
+#   instance:
+#     prefer-ip-address: true
 
-  client:
-    fetch-registry: true
+#   client:
+#     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:8070/eureka/
