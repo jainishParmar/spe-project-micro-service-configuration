@@ -18,9 +18,10 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedOrigins: "http://iiitb-hostel.local"
+            allowedMethods: "GET, POST, PUT, DELETE, OPTIONS"
             allowedHeaders: "*"
+            allowCredentials: true
 
 # eureka:
 #   instance:
