@@ -8,18 +8,16 @@ spring:
         - id: USER-SERVICE
           uri: ${USER_SERVICE_URL}
           predicates:
-            - Path=/auth/**
-            - Path=/users/**
-            - Path=/api/users/**
-            - Path=/
+            - Path=/auth/**,/users/**,/api/users/**,/
         - id: HOSTEL-SERVICE
           uri: ${HOSTEL_SERVICE_URL}
           predicates:
-            - Path=/api/hostel/**
-            - Path=/api/student/**
+            - Path=/api/hostel/**,/api/student/**
 
-      globalcors:  # ✅ Correct position
-        add-to-simple-url-handler-mapping: true
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+      globalcors:
         corsConfigurations:
           '[/**]':
             allowedOrigins:
@@ -31,20 +29,15 @@ spring:
               - DELETE
               - OPTIONS
             allowedHeaders:
-              - "authorization"
-              - "content-type"
-              - "x-requested-with"
+              - "*"
             allowCredentials: true
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    prometheus:
-      enabled: true
-  metrics:
-    export:
-      prometheus:
-        enabled: true
+# eureka:
+#   instance:
+#     prefer-ip-address: true
+
+#   client:
+#     fetch-registry: true
+#     register-with-eureka: true
+#     serviceUrl:
+#       defaultZone: http://localhost:8070/eureka/
