@@ -32,6 +32,20 @@ spring:
               - "*"
             allowCredentials: true
 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
 # eureka:
 #   instance:
 #     prefer-ip-address: true
