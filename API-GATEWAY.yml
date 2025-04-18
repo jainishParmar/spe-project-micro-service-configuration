@@ -8,12 +8,15 @@ spring:
         - id: USER-SERVICE
           uri: ${USER_SERVICE_URL}
           predicates:
-            - Path=/auth/**,/users/**,/api/users/**,/
+            - Path=/auth/** 
+            - Path=/users/** 
+            - Path=/api/users/**
+            - Path=/
         - id: HOSTEL-SERVICE
           uri: ${HOSTEL_SERVICE_URL}
           predicates:
-            - Path=/api/hostel/**,/api/student/**
-
+            - Path=/api/hostel/**
+            - Path=/api/student/**
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
 
@@ -32,12 +35,15 @@ spring:
               - "*"
             allowCredentials: true
 
-# eureka:
-#   instance:
-#     prefer-ip-address: true
-
-#   client:
-#     fetch-registry: true
-#     register-with-eureka: true
-#     serviceUrl:
-#       defaultZone: http://localhost:8070/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
