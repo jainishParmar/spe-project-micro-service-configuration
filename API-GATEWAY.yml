@@ -8,8 +8,8 @@ spring:
         - id: USER-SERVICE
           uri: ${USER_SERVICE_URL}
           predicates:
-            - Path=/auth/** 
-            - Path=/users/** 
+            - Path=/auth/**
+            - Path=/users/**
             - Path=/api/users/**
             - Path=/
         - id: HOSTEL-SERVICE
@@ -17,10 +17,9 @@ spring:
           predicates:
             - Path=/api/hostel/**
             - Path=/api/student/**
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
 
-      globalcors:
+      globalcors:  # ✅ Correct position
+        add-to-simple-url-handler-mapping: true
         corsConfigurations:
           '[/**]':
             allowedOrigins:
