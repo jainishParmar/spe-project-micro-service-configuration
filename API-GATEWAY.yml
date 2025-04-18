@@ -46,6 +46,8 @@ management:
       prometheus:
         enabled: true
 
+#project was working with this configuration
+
 # eureka:
 #   instance:
 #     prefer-ip-address: true
