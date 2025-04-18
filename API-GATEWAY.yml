@@ -1,5 +1,6 @@
 server:
   port: 5004
+
 spring:
   cloud:
     gateway:
@@ -15,12 +16,20 @@ spring:
 
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
       globalcors:
-        cors-configurations:
+        corsConfigurations:
           '[/**]':
-            allowedOrigins: "http://iiitb-hostel.local"
-            allowedMethods: "GET, POST, PUT, DELETE, OPTIONS"
-            allowedHeaders: "*"
+            allowedOrigins:
+              - "http://iiitb-hostel.local"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
             allowCredentials: true
 
 # eureka:
