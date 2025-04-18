@@ -33,7 +33,7 @@ spring:
             allowedHeaders:
               - "authorization"
               - "content-type"
-              - "*"
+              - "x-requested-with"
             allowCredentials: true
 
 management:
