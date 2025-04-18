@@ -1,25 +1,32 @@
 server:
   port: 5002
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://${USER_DB}:3306/user_managment?createDatabaseIfNotExist=true
     username: root
     password: root
+
   jpa:
     hibernate:
       ddl-auto: update
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true  # Optional: helpful during dev for debugging queries
+    properties:
+      hibernate:
+        format_sql: true
 
-
-
-# eureka:
-#   instance:
-#     prefer-ip-address: true
-
-#   client:
-#     fetch-registry: true
-#     register-with-eureka: true
-#     serviceUrl:
-#       defaultZone: http://localhost:8070/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
